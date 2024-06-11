@@ -1,90 +1,156 @@
-
-
-.navbar{
-    margin-left :10%;
-    margin-right:10%;
-    margin-top  :30px;
-    display:flex;  
-    align-items:center;
-    justify-content: space-between;
+/* Reset CSS */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
-
-    .tombol a:hover {
-    background-color: #ddd;
-    color: grey;
-}
-    .tombol a {
+/* Body style */
+body {
+    font-family: Arial, sans-serif;
+    background-color: black;
     color: white;
+    line-height: 1.6;
+}
+
+/* Header and Navigation */
+header {
+    background-color: #4CAF50;
+    padding: 15px 0;
     text-align: center;
-    padding: 30px;
-    text-decoration: none;
-    font-size: 17px;
 }
 
-    .sosmed a{
-    padding: 4px;
+header h1 {
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
-    .t-1{
-        margin-left: 20%;
-        margin-top: 10%;
-        margin-right: 20%;
-        text-decoration: none;
-        font-family: sans-serif;
-        font-weight: bold;
-        font-stretch:expanded;
-        min-height: 100vh;
-}
-
-    .t-1 > h1{
-    font-size: 50px;   
-    letter-spacing: 2px;  
-}
-
-    .t-1-1{
-    font-size: 20px;
-    margin-top: -3% ;
-    margin-bottom: 20%;
-    letter-spacing: 2px;
-
-}
-    footer > a {
-    color: grey;
-    text-decoration: none;
-}
-    footer > a:hover{
-    color: yellow;
-    text-decoration: dashed;
-}
-    hr{
-    width: 80%;
-    border: none;
-    height: 1px;
-    background-color: grey;
-    margin-top: 10%;
-}
-
-    .gambar{
+nav ul {
+    list-style-type: none;
     display: flex;
-    justify-content: space-around;
-    border-radius: 5%;
-    margin-bottom: 5%;
- 
+    justify-content: center;
+    gap: 20px;
 }
 
-
-
-   .gambar img{
-    width: 1000px;
-min-height: 200px;
-    border-image: round;
-    border-radius: 5%;
-    border: 1px solid lightgrey;
-}
-    .gambar-text{
+nav ul li a {
+    color: white;
     text-decoration: none;
-    font-weight: bold;
-    letter-spacing: 1px;
-    
+    font-size: 1.2em;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #333;
+}
+
+.navbar img {
+    margin-right: 10px;
+}
+
+.navbar .tombol a,
+.navbar .sosmed a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+/* Main Content */
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+.t-1 {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.t-1 h1 {
+    font-size: 2.5em;
+}
+
+.t-1 .t-1-1 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.gambar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gambar-text {
+    text-align: center;
+}
+
+.gambar-text img {
+    width: 100%;
+    max-width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+/* Footer */
+footer {
+    background-color: #4CAF50;
+    padding: 10px;
+    text-align: center;
+    font-size: 1em;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .navbar .tombol,
+    .navbar .sosmed {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .gambar {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    header h1 {
+        font-size: 1.5em;
+    }
+
+    nav ul li a {
+        font-size: 1em;
+    }
+
+    .t-1 h1 {
+        font-size: 2em;
+    }
+
+    .t-1 .t-1-1 {
+        font-size: 1.2em;
+    }
+
+    .gambar-text img {
+        max-width: 150px;
+    }
 }
